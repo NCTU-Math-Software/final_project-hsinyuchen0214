@@ -9,7 +9,9 @@ Give 3 points randomly, determine whether the origin is in the triangle formed b
 
 
 想法 Thoughts：
+
 順時針沿著三角形的邊繞，判斷某點是否在每條邊的右邊(透過外積判斷)，如果該點在每條邊的右邊，則此點就在三角形內；否則在三角形外。
 
 做法 Method：
+
 利用外積判斷，假設A、B、C三點，先求出各點與原點構成的向量，並算OA與OB、OB與OC、OC與OA之外積的值，若這三個值都是正數或都是負數，則代表原點在三角形內。
