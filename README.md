@@ -1,9 +1,7 @@
 # final_project-hsinyuchen0214
 final_project-hsinyuchen0214 created by GitHub Classroom
 
-My Project : 
-     
-     Project 5
+My Project : Project 5
 
 題目：
 
@@ -18,4 +16,13 @@ My Project :
 
 做法 Method：
 
-     利用外積判斷，假設A、B、C三點，先求出各點與原點構成的向量，並算OA與OB、OB與OC、OC與OA之外積的值，若這三個值都是正數或都是負數，則代表原點在三角形內。
+     利用外積判斷，假設A、B、C三點，先求出各點與原點構成的向量，並算OA與OB、OB與OC、OC與OA(順序不可顛倒)之外積的值，若這三個值都是正數或都是負數，則代表原點都在該邊的同側，因此原點在三角形內。
+     
+     要求使用者 輸入 三角形的三點 A(x1,y1)，B(x2,y2)，C(x3,y3)；原點 O(0,0)
+     1. 先求出三個向量 OA,OB,OC
+     2. 計算 OA x OB, OB x OC, OC x OA ( x 表示外積)
+     3. 如果這三組的向量外積的值都是同號(都是 正數 或都是 負數 )，即方向相同，則說明原點在三角形每條邊的同側，即三角形的內部；否則必在外部
+     
+額外功能：
+
+     點擊模式，使用者可以任意以逆時針方向點及滑鼠左鍵任意次，直到按右鍵停止，程式便會判斷原點是否在此多邊形內。
