@@ -7,7 +7,7 @@ final_project-hsinyuchen0214 created by GitHub Classroom
 
      任意給定平面上三點, 判斷原點是否在這三點所圍成的三角形內。
 
-     Give 3 points randomly, determine whether the origin is in the triangle formed by the 3 points or not.
+     Give 3 points randomly , determine whether the origin is in the triangle formed by the 3 points or not.
 
 
 ## 想法 Thoughts：
@@ -27,6 +27,7 @@ final_project-hsinyuchen0214 created by GitHub Classroom
      
      利用這個想法加以延伸：
      任何 n 多邊形都可以切成 n-2 個三角形，再去判斷原點或指定點是否在那 n-2 個三角形內
+     
      1. 多邊形模式：點擊模式，使用者可以任意以逆時針方向點及滑鼠左鍵任意次，直到按右鍵停止，程式便會判斷原點是否在此多邊形內。
      2. 可指定其他點：使用者可以指定原點以外的點，再以逆時針點擊畫面上任意個點(直到按滑鼠右鍵停止)，並判斷此點是否在那些點構成的多邊形內。
      3. 計算多邊形面積：以上兩種模式皆會計算出多邊形面劑，利用 面積 = 1/2*[(X_1*Y_2 - X_2*Y_1) + (X_2*Y_3 - X_3*Y_2) + ... + (X_n*Y_1 - X_1*Y_n)] 之公式
