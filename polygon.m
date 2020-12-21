@@ -42,6 +42,16 @@ function polygon % ¶h√‰ßŒ
     % Draw the origin
     plot(o1,o2,'o')
     
+    % Compute the area of the polygon
+    for ii = 1:(number-1)
+        A = 0;
+        AA = XX(ii)*YY(ii+1)-XX(ii+1)*YY(ii);
+        A = A + AA;
+    end
+    Area = A*(1/2);
+    disp('The area of the polygon is:')
+    disp(Area)
+    
     % If one of the point is the origin
     for ii = 1 : number
         if X(ii) == 0 

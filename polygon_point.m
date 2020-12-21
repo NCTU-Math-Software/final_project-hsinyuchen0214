@@ -43,6 +43,16 @@ function polygon_point(p) % 多邊形 且 可指定點
     % Draw the assigned point
     plot(p1,p2,'o')
     
+    % Compute the area of the polygon
+    for ii = 1:(number-1)
+        A = 0;
+        AA = XX(ii)*YY(ii+1)-XX(ii+1)*YY(ii);
+        A = A + AA;
+    end
+    Area = A*(1/2);
+    disp('The area of the polygon is:')
+    disp(Area)
+    
     % If one of the point is the assigned point
     for ii = 1 : number
         if X(ii) == p(1) 
