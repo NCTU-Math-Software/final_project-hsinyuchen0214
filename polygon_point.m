@@ -31,7 +31,7 @@ function polygon_point(p,length,width) % 多邊形 且 可指定點 和 設定�
         end
     end  
    
-    % form the point of the origin 
+    % form the point of the assigned point
     p1 = p(1); 
     p2 = p(2);
     % Let the last point connected to the beginning point
