@@ -7,7 +7,7 @@ final_project-hsinyuchen0214 created by GitHub Classroom
 
      任意給定平面上三點, 判斷原點是否在這三點所圍成的三角形內。
 
-     Give 3 points randomly in a plane, then determine whether the origin is in the triangle formed by the 3 points or not.
+     Given 3 points randomly in a plane, determine whether the origin is in the triangle formed by these 3 points or not.
 
 
 ## 想法 Thoughts：
