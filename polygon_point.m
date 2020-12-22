@@ -1,11 +1,11 @@
-function polygon_point(p) % 多邊形 且 可指定點
+function polygon_point(p,length,width) % 多邊形 且 可指定點 和 設定長寬範圍
     %
     % Input: "Click" the points randomly in "counter-clockwise"
     % Output: The assigned point is in the polygon formed by the points or not.
     %
     % Example:
-    %       >> p = [15 25];
-    %       >> polygon_point(p)
+    %       >> p = [15 25];length = 150;width = 100;
+    %       >> polygon_point(p,length,width)
     %       (Output should be: the plot of the polygon and the assigned point and tell whether the point is in the polygon) 
     %
     % Set empty matrices to save the datas we need
@@ -18,7 +18,7 @@ function polygon_point(p) % 多邊形 且 可指定點
     
     figure % 叫出 figure 視窗
     while 1
-        axis([-100 100, -100 100]) % fix the range of the figure
+        axis([(-length) length, (-width) width]) % fix the range of the figure
         [x,y,BUTTON] = ginput(1); % 點擊
         plot(floor(x),floor(y),'o') % plot the clicked points
         hold on
@@ -84,10 +84,10 @@ function polygon_point(p) % 多邊形 且 可指定點
     % If the cross values have the same sign( + or - ), means the assigned point is inside the triangle 
     for ii = 1 : (number-2)
         if crossval(ii,:) > 0 
-                disp('The point is in the polygon! 原點在此多邊形內')
+                disp('The assigned point is in the polygon! 原點在此多邊形內')
         else 
             if crossval(ii,:) < 0
-                disp('The point is in the polygon! 原點在此多邊形內')
+                disp('The assigned point is in the polygon! 原點在此多邊形內')
             end
         end
     end
