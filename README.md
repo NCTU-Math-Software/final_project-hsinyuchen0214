@@ -1,4 +1,4 @@
-##### My Project : 任意給定平面上三點, 判斷原點是否在這三點所圍成的三角形內。
+# My Project : 任意給定平面上三點, 判斷原點是否在這三點所圍成的三角形內。
 
 final_project-hsinyuchen0214 created by GitHub Classroom
 
