@@ -19,7 +19,7 @@ final_project-hsinyuchen0214 created by GitHub Classroom
      Given 3 points randomly in a plane, determine whether the origin is in the triangle formed by these 3 points or not.
 
 
-## *想法 Thoughts：
+## 想法 Thoughts：
 
      順時針沿著三角形的邊繞一圈，判斷某點是否在每條邊的右邊(透過外積判斷)，如果該點在每條邊的右邊，則此點就在三角形內；否則在三角形外。
 
