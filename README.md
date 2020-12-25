@@ -1,4 +1,4 @@
-# My Project : 判斷原點是否在任意三點所圍成的三角形內。
+# My Project : 判斷原點是否在任意三點所圍成的三角形內
 
 final_project-hsinyuchen0214 created by GitHub Classroom
 
