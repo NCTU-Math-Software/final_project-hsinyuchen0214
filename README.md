@@ -1,7 +1,16 @@
 # My Project : 
-# 任意給定平面上三點, 判斷原點是否在這三點所圍成的三角形內。
+#    任意給定平面上三點, 判斷原點是否在這三點所圍成的三角形內。
 
 final_project-hsinyuchen0214 created by GitHub Classroom
+
+<triangle.m> 使用者「輸入」三個點(向量)
+             輸出 (1) 原點是否在三個點圍成的三角形內 (2) 畫出三角形和原點
+             
+<polygon.m> 使用者以逆時針「點擊」多個點後
+            輸出 (1) 原點是否在這多個點形成的多邊形內 (2)畫出多邊形和原點 (3)計算多邊形面積
+            
+<polygon_point.m> 使用者可以「指定目標點 和 設定點擊範圍(長和寬)」，再以逆時針「點擊」多個點
+                  輸出 (1) 原點是否在這多個點形成的多邊形內 (2)並畫出多邊形和指定點 (3)計算多邊形面積
 
 ## 題目：
 
@@ -29,7 +38,7 @@ final_project-hsinyuchen0214 created by GitHub Classroom
         (若A、B、C其中一點即為原點，直接告訴使用者，原點在三角形的邊上)
         
      2. 先求出三個向量 OA,OB,OC
-          o = [0 0]; % Set the origin
+          origin = [0 0]; % Set the origin
           OA = a - o; 
           OB = b - o;
           OC = c - o;
@@ -80,7 +89,6 @@ final_project-hsinyuchen0214 created by GitHub Classroom
           
      3. 計算出多邊形的面積並顯示
           for ii = 1:(number-1)
-               A = 0;
                AA = XX(ii)*YY(ii+1)-XX(ii+1)*YY(ii);
                A = A + AA;
           end
