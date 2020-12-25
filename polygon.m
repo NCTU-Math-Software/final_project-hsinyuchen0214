@@ -1,11 +1,10 @@
 function polygon % 多邊形
     %
-    % Input: "Click" the points randomly in "counter-clockwise"
-    % Output: The origin is in the polygon formed by the points or not.
-    %
-    % Example:
-    %       >> polygon
-    %       (Output should be: the plot of the polygon and the origin and tell whether the origin is in the polygon) 
+    % Input: Use mouse to "CLICK" the points randomly in "counter-clockwise"
+    %        (Stop by clicking the right click. < This point ALSO counts!!!!! >)
+    % Output: (1) The origin is in the polygon formed by the points or not
+    %         (2) Plot the origin and the polygon
+    %         (3) The area of the polygon
     %
     % Set empty matrices to save the datas we need
     X = [];
@@ -24,7 +23,7 @@ function polygon % 多邊形
         X = [X;floor(x)]; % record the points
         Y = [Y;floor(y)];
 
-        if BUTTON == 3 % 若按左鍵停止
+        if BUTTON == 3 % 若按右鍵停止
             number = size(X); % the number of the points
             break;
         end
@@ -43,8 +42,8 @@ function polygon % 多邊形
     plot(o1,o2,'o')
     
     % Compute the area of the polygon
-    for ii = 1:(number-1)
-        A = 0;
+    A = 0; % 用來累積面積
+    for ii = 1:number
         AA = XX(ii)*YY(ii+1)-XX(ii+1)*YY(ii);
         A = A + AA;
     end
@@ -61,11 +60,11 @@ function polygon % 多邊形
         end
     end
     
-    o = [0 0]; % Set the origin
+    origin = [0 0]; % Set the origin
     % Compute the vector of the points and the origin, respectively
     for ii = 1:number
-        OA(ii,1) = [X(ii)-o(1)];
-        OA(ii,2) = [Y(ii)-o(2)];
+        OA(ii,1) = [X(ii)-origin(1)];
+        OA(ii,2) = [Y(ii)-origin(2)];
     end
 
     % Compute the cross values of two of the vectors
@@ -92,4 +91,5 @@ function polygon % 多邊形
         end
     end
 end
+
 

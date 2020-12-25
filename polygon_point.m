@@ -1,12 +1,14 @@
 function polygon_point(p,length,width) % 多邊形 且 可指定點 和 設定長寬範圍
     %
-    % Input: "Click" the points randomly in "counter-clockwise"
-    % Output: The assigned point is in the polygon formed by the points or not.
+    % Input: Use mouse to "CLICK" the points randomly in "counter-clockwise"
+    %        (Stop by clicking the right click. < This point ALSO counts!!!!! >)
+    % Output: (1) The assigned point is in the polygon formed by the points or not
+    %         (2) Plot the assigned point and the polygon
+    %         (3) The area of the polygon
     %
     % Example:
     %       >> p = [15 25];length = 150;width = 100;
     %       >> polygon_point(p,length,width)
-    %       (Output should be: the plot of the polygon and the assigned point and tell whether the point is in the polygon) 
     %
     % Set empty matrices to save the datas we need
     X = [];
@@ -25,7 +27,7 @@ function polygon_point(p,length,width) % 多邊形 且 可指定點 和 設定�
         X = [X;floor(x)]; % record the points
         Y = [Y;floor(y)];
 
-        if BUTTON == 3 % 若按左鍵停止
+        if BUTTON == 3 % 若按右鍵停止
             number = size(X); % the number of the points
             break;
         end
@@ -44,8 +46,8 @@ function polygon_point(p,length,width) % 多邊形 且 可指定點 和 設定�
     plot(p1,p2,'o')
     
     % Compute the area of the polygon
-    for ii = 1:(number-1)
-        A = 0;
+    A = 0; % 用來累積面積
+    for ii = 1:number
         AA = XX(ii)*YY(ii+1)-XX(ii+1)*YY(ii);
         A = A + AA;
     end
