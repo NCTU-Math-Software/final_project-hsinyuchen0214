@@ -3,6 +3,10 @@
 
 final_project-hsinyuchen0214 created by GitHub Classroom
 
+### 我做的是 Project 5：任意給定平面上三點, 判斷原點是否在這三點所圍成的三角形內。
+### Given 3 points randomly in a plane, determine whether the origin is in the triangle formed by these 3 points or not.
+
+#### 共有三個程式
 #### <triangle.m> 使用者「輸入」三個點(向量)
 #### ----------------輸出 (1) 原點是否在三個點圍成的三角形內 (2) 畫出三角形和原點
              
@@ -11,12 +15,6 @@ final_project-hsinyuchen0214 created by GitHub Classroom
             
 #### <polygon_point.m> 使用者可以「指定目標點 和 設定點擊範圍(長和寬)」，再用滑鼠以逆時針「點擊」多個點，直到按右鍵停止(注意：此點也算一個點！)
 #### -----------------------輸出 (1) 原點是否在這多個點形成的多邊形內 (2)並畫出多邊形和指定點 (3)計算多邊形面積
-
-## 題目：
-
-     任意給定平面上三點, 判斷原點是否在這三點所圍成的三角形內。
-
-     Given 3 points randomly in a plane, determine whether the origin is in the triangle formed by these 3 points or not.
 
 
 ## 想法 Thoughts：
