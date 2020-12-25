@@ -72,10 +72,10 @@ final_project-hsinyuchen0214 created by GitHub Classroom
      
 ## 額外功能、延伸：
      
-     利用原本的想法加以延伸：
+###  利用原本的想法加以延伸：
      由於任何 n 多邊形都可以切成 n-2 個三角形，再去判斷原點或指定點是否在這 n-2 個三角形其中的某一個三角形內。
      
-     作法：
+###  作法：
      1. 讓使用者「以逆時針點擊」任意數量個點(直到按滑鼠右鍵停止)，假設這些點是A,B,C,D,E,...
         (所以若以A點為基準，這些點可以構成：三角形ABC、三角形ACD、三角形ADE、...)
           [x,y,BUTTON] = ginput(1);
@@ -118,7 +118,7 @@ final_project-hsinyuchen0214 created by GitHub Classroom
           crossVal3 = [crossVal3;crossVal];
           
           
-     * 多邊形模式：
+###  * 多邊形模式：
           點擊模式，使用者可以任意以逆時針方向點及滑鼠左鍵任意次，直到按右鍵停止，程式便會判斷原點是否在此多邊形內。
           (詳情看 polygon.m)
           input: 以逆時針任意點擊三個點
@@ -126,7 +126,7 @@ final_project-hsinyuchen0214 created by GitHub Classroom
           output: (1) 判斷原點是否在多邊形內 
                   (2) 畫出多邊形和原點
           
-     * 可指定原點以外的點 和 設定可點擊的長寬範圍：
+###  * 可指定原點以外的點 和 設定點擊的長寬範圍：
           使用者可以指定原點以外的點作為判斷目標，並設定點擊畫面的大小，
           再以逆時針點擊畫面上任意個點(直到按滑鼠右鍵停止)，最後判斷目標點是否在那些點構成的多邊形內，以及顯示多邊形和目標點的相對位置圖。
           (詳情看 polygon_point.m)
@@ -136,5 +136,5 @@ final_project-hsinyuchen0214 created by GitHub Classroom
           output: (1) 判斷原點是否在多邊形內 
                   (2) 畫出多邊形和指定點
           
-     * 計算多邊形面積：
+###  * 計算多邊形面積：
           以上兩種模式皆會計算出多邊形面積，利用 面積 = 1/2*[(X_1*Y_2 - X_2*Y_1) + (X_2*Y_3 - X_3*Y_2) + ... + (X_n*Y_1 - X_1*Y_n)] 之公式。
