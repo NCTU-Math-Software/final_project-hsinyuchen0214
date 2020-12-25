@@ -12,18 +12,18 @@ final_project-hsinyuchen0214 created by GitHub Classroom
 #### <polygon_point.m> 使用者可以「指定目標點 和 設定點擊範圍(長和寬)」，再以逆時針「點擊」多個點
 #### -----------------------輸出 (1) 原點是否在這多個點形成的多邊形內 (2)並畫出多邊形和指定點 (3)計算多邊形面積
 
-## 題目：
+## *題目：
 
      任意給定平面上三點, 判斷原點是否在這三點所圍成的三角形內。
 
      Given 3 points randomly in a plane, determine whether the origin is in the triangle formed by these 3 points or not.
 
 
-## 想法 Thoughts：
+## *想法 Thoughts：
 
      順時針沿著三角形的邊繞一圈，判斷某點是否在每條邊的右邊(透過外積判斷)，如果該點在每條邊的右邊，則此點就在三角形內；否則在三角形外。
 
-## 做法 Method：
+## *做法 Method：
 
      利用外積判斷，假設有A、B、C三點，先求出各點與原點O構成的向量，並算OA與OB、OB與OC、OC與OA(順序不可顛倒)之外積的值；
      若這三個外積值都是正數或都是負數，則代表原點都在該邊的同側，於是原點O就會在三角形內。
@@ -48,7 +48,7 @@ final_project-hsinyuchen0214 created by GitHub Classroom
           y = OB(1)*OC(2)-OB(2)*OC(1);
           z = OC(1)*OA(2)-OC(2)*OA(1);
           
-     4. 如果這三組的向量外積的值都是「同號」( 都是 正數 或都是 負數 )，即方向相同，
+     4. 如果這三組的向量外積的值都是「同號」( 都是正數 或 都是負數 )，即方向相同，
         則說明原點在三角形每條邊的同側，即三角形的內部；否則必在外部
           if x > 0 
                if y > 0 
@@ -70,13 +70,13 @@ final_project-hsinyuchen0214 created by GitHub Classroom
           plot(o1,o2,'o')
      
      
-## 額外功能、延伸：
+## *額外功能、延伸 Extra：
      
 ###  利用原本的想法加以延伸：
      由於任何 n 多邊形都可以切成 n-2 個三角形，再去判斷原點或指定點是否在這 n-2 個三角形其中的某一個三角形內。
      
 ###  作法：
-     1. 讓使用者「以逆時針點擊」任意數量個點(直到按滑鼠右鍵停止)，假設這些點是A,B,C,D,E,...
+     1. 讓使用者「以逆時針點擊」任意數量個點(直到按滑鼠右鍵停止，此點也算)，假設這些點是A,B,C,D,E,...
         (所以若以A點為基準，這些點可以構成：三角形ABC、三角形ACD、三角形ADE、...)
           [x,y,BUTTON] = ginput(1);
           
