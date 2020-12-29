@@ -28,12 +28,11 @@ final_project-hsinyuchen0214 created by GitHub Classroom
 #### --------------------------輸出 (1) 原點是否在這多個點形成的多邊形內 (2)並畫出多邊形和指定點 (3)計算多邊形面積
 #### Example
      input: 以逆時針任意點擊三個點
-            >> p = [15 25];length = 150;width = 100;
+            >> p = [15 25]; length = 150; width = 100;
             >> polygon_point(p,length,width)
      output: (1) 判斷指定點是否在多邊形內 
              (2) 畫出多邊形和指定點
              (3) 多邊形面積
-
 
 
 ## 想法 Thoughts：
@@ -116,8 +115,8 @@ final_project-hsinyuchen0214 created by GitHub Classroom
           
      5. 找出各點與原點(或指定點)構成的向量(OA,OB,OC,OD,OE,... 或 PA,PB,PC,PD,PE,...)，並統一存入一個矩陣
           for ii = 1:number
-               OA(ii,1) = [X(ii)-o(1)];
-               OA(ii,2) = [Y(ii)-o(2)];
+               OA(ii,1) = [X(ii)-origin(1)];
+               OA(ii,2) = [Y(ii)-origin(2)];
           end
           
      6. 利用外積法去判斷原點(或指定點)是否在某一個三角形內
@@ -134,7 +133,7 @@ final_project-hsinyuchen0214 created by GitHub Classroom
        (詳情看 polygon.m)
           
 ###  * 可指定原點以外的點 和 設定點擊的長寬範圍：
-       使用者可以*指定原點以外的點*作為判斷目標，並*設定點擊畫面的大小*，
+       使用者可以**指定原點以外的點**作為判斷目標，並**設定點擊畫面的大小**，
        再用滑鼠以逆時針點擊任意次，直到按右鍵停止(注意：此點也算一個點！)，程式便會判斷指定點是否在此多邊形內、畫相對位置圖、顯示面積。
        (詳情看 polygon_point.m)
           
